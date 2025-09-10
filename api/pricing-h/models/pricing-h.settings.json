@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pricing_h",
+  "info": {
+    "name": "Historique tarifs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "version": {
+      "type": "integer"
+    },
+    "start_date": {
+      "type": "datetime"
+    },
+    "end_date": {
+      "type": "datetime"
+    },
+    "code": {
+      "type": "string"
+    },
+    "label": {
+      "type": "text"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "coefficient": {
+      "type": "decimal"
+    },
+    "rule_cumulation": {
+      "type": "text"
+    },
+    "rule_best_practices": {
+      "type": "text"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "CNS",
+        "BNXT"
+      ]
+    },
+    "code_rule_cumulation": {
+      "type": "text"
+    }
+  }
+}

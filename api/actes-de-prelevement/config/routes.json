@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/actes-de-prelevements",
+      "handler": "actes-de-prelevement.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/actes-de-prelevements/count",
+      "handler": "actes-de-prelevement.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/actes-de-prelevements/:id",
+      "handler": "actes-de-prelevement.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/actes-de-prelevements",
+      "handler": "actes-de-prelevement.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/actes-de-prelevements/:id",
+      "handler": "actes-de-prelevement.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/actes-de-prelevements/:id",
+      "handler": "actes-de-prelevement.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

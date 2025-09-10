@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/receptacles",
+      "handler": "receptacles.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/receptacles/count",
+      "handler": "receptacles.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/receptacles/:id",
+      "handler": "receptacles.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/receptacles",
+      "handler": "receptacles.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/receptacles/:id",
+      "handler": "receptacles.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/receptacles/:id",
+      "handler": "receptacles.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

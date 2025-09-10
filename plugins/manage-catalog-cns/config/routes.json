@@ -1,0 +1,32 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/updateCatalog",
+      "handler": "manage-catalog-cns.import",
+      "config": {
+        "policies": [],
+        "description": "Update catalogue with a file",
+        "tag": {
+          "plugin": "manage-catalog-cns",
+          "name": "manage",
+          "actionType": "import"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/downloadCatalog",
+      "handler": "manage-catalog-cns.export",
+      "config": {
+        "policies": [],
+        "description": "Dowload all data of the catalog in a file",
+        "tag": {
+          "plugin": "manage-catalog-cns",
+          "name": "manage",
+          "actionType": "export"
+        }
+      }
+    }
+  ]
+}

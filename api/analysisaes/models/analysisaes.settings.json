@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "analysisaes",
+  "info": {
+    "name": "Analyses AES",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "expired": {
+      "type": "boolean",
+      "default": false
+    },
+    "application_start_date": {
+      "type": "datetime"
+    },
+    "conditions": {
+      "columnName": "conditions",
+      "collection": "codesaes"
+    },
+    "target_sites": {
+      "collection": "codesaes"
+    },
+    "specimen": {
+      "type": "string"
+    },
+    "prices": {
+      "collection": "pricing"
+    },
+    "version": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    },
+    "histories": {
+      "collection": "analysisaes-h"
+    }
+  }
+}

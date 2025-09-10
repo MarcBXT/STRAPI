@@ -1,0 +1,18 @@
+{
+  "manage-catalog.plugin.name": "Administration du catalogue BioneXt LAB",
+  "manage-catalog.admin": "Administration du catalogue BioneXt LAB",
+  "manage-catalog.admin.descr": "Gérer le catalogue via un fichier Excel",
+  "manage-catalog.tab.import": "Mise à jour",
+  "manage-catalog.tab.export": "Téléchargement",
+  "manage-catalog.button.import": "Mettre à jour",
+  "manage-catalog.button.export": "Télécharger",
+  "manage-catalog.drag.drop": "Glisser-déposer un fichier dans cette zone ou bien rechercher un fichier à déposer.",
+  "manage-catalog.import.success": "Fichier importé avec succès !",
+  "manage-catalog.export.success": "Fichier exporté avec succès !",
+  "manage-catalog.import.error": "Une erreur s'est produite lors de la mise à jour du catalogue.",
+  "manage-catalog.export.error": "Une erreur s'est produite lors du téléchargement du catalogue.",
+  "manage-catalog.import.header.name": "Nom du fichier",
+  "manage-catalog.import.header.status": "Satut",
+  "manage-catalog.import.header.date": "Importé le"
+  
+}

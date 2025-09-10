@@ -1,0 +1,90 @@
+{
+  "paths": {
+  "/manage-catalog/synchronize": {
+    "get": {
+      "deprecated": false,
+      "description": "Retrieve analysis and receptacles updated since date",
+      "responses": {
+        "200": {
+          "description": "response",
+          "content": {
+            "application/json": {
+              "schema": {
+                  "$ref": "#/components/schemas/Catalog"
+              }
+            }
+          }
+        },
+        "403": {
+          "description": "Forbidden",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Error"
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "Not found",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Error"
+              }
+            }
+          }
+        },
+        "default": {
+          "description": "unexpected error",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Error"
+              }
+            }
+          }
+        }
+      },
+      "summary": "",
+      "tags": [
+        "ManageCatalog - Manage"
+      ],
+      "parameters": [{
+        "name": "date",
+        "in": "query",
+        "required": true,
+        "description": "the date",
+        "schema": {
+          "type": "string"
+        },
+        "deprecated": false
+      }]
+    }
+  }
+  },
+  "components": {
+    "schemas": {
+      "Catalog": {
+        "properties": {
+          "receptacles": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Receptacles"
+              }
+            }
+          },
+          "analysis": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Analysis"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

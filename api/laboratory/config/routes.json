@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/laboratories",
+      "handler": "laboratory.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/laboratories/count",
+      "handler": "laboratory.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/laboratories/:id",
+      "handler": "laboratory.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/laboratories",
+      "handler": "laboratory.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/laboratories/:id",
+      "handler": "laboratory.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/laboratories/:id",
+      "handler": "laboratory.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

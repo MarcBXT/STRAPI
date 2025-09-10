@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/prelevements",
+      "handler": "prelevement.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/prelevements/count",
+      "handler": "prelevement.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/prelevements/:id",
+      "handler": "prelevement.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/prelevements",
+      "handler": "prelevement.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/prelevements/:id",
+      "handler": "prelevement.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/prelevements/:id",
+      "handler": "prelevement.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

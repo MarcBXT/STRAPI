@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prelevements",
+  "info": {
+    "name": "Prélèvement"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "act": {
+      "model": "actes-de-prelevement"
+    },
+    "analyses": {
+      "via": "prelevements",
+      "collection": "analysis"
+    }
+  }
+}

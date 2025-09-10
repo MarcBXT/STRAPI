@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "color",
+  "info": {
+    "name": "Couleurs",
+    "description": "Trouvez votre couleur : https://www.w3schools.com/colors/colors_picker.asp"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "pluginOptions": {},
+      "type": "string",
+      "required": true
+    },
+    "code": {
+      "pluginOptions": {},
+      "type": "string",
+      "maxLength": 20,
+      "required": true,
+      "regex": "^#[0-9a-fA-F]{6}$"
+    },
+    "receptacles": {
+      "via": "color",
+      "collection": "receptacles"
+    },
+    "label_en": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "label_de": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "label_pt": {
+      "pluginOptions": {},
+      "type": "string"
+    }
+  }
+}

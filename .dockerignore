@@ -1,0 +1,9 @@
+Dockerfile
+.git
+node_modules
+.gitlab-ci.yml
+.gitignore
+.editorconfig
+.env.example
+.eslint*
+README.md

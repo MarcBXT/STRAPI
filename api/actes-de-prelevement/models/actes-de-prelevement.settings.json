@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sampling_act",
+  "info": {
+    "name": "Actes de Prélèvement"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "max_age": {
+      "type": "integer",
+      "min": 0,
+      "max": 200
+    },
+    "act": {
+      "model": "pricing"
+    },
+    "act_max_age": {
+      "model": "pricing"
+    },
+    "act_home": {
+      "model": "pricing"
+    }
+  }
+}

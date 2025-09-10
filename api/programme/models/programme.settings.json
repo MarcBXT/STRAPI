@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "centrifugation",
+  "info": {
+    "name": "programme"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

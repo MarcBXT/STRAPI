@@ -1,0 +1,17 @@
+{
+  "manage-catalog-cns.plugin.name": "Administration de la tarification CNS",
+  "manage-catalog-cns.admin": "Administration de la tarification CNS",
+  "manage-catalog-cns.admin.descr": "Gérer le catalogue via un fichier Excel de la CNS",
+  "manage-catalog-cns.tab.import": "Mise à jour",
+  "manage-catalog-cns.tab.export": "Téléchargement",
+  "manage-catalog-cns.button.import": "Mettre à jour",
+  "manage-catalog-cns.button.export": "Télécharger",
+  "manage-catalog-cns.drag.drop": "Glisser-déposer un fichier dans cette zone ou bien rechercher un fichier à déposer.",
+  "manage-catalog-cns.import.success": "Fichier importé avec succès !",
+  "manage-catalog-cns.export.success": "Fichier exporté avec succès !",
+  "manage-catalog-cns.import.error": "Une erreur s'est produite lors de la mise à jour du catalogue.",
+  "manage-catalog-cns.export.error": "Une erreur s'est produite lors du téléchargement du catalogue.",
+  "manage-catalog-cns.import.header.name": "Nom du fichier",
+  "manage-catalog-cns.import.header.status": "Satut",
+  "manage-catalog-cns.import.header.date": "Importé le"  
+}

@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "import",
+  "info": {
+    "name": "Historique des imports",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_of_file": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "log_content": {
+      "type": "json"
+    },
+    "error_content": {
+      "type": "json"
+    },
+    "file": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "AES",
+        "BNXT",
+        "CNS"
+      ]
+    }
+  }
+}

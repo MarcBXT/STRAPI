@@ -1,0 +1,32 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/updateCatalog",
+      "handler": "manage-catalog-aes.import",
+      "config": {
+        "policies": [],
+        "description": "Update catalogue AES with a file",
+        "tag": {
+          "plugin": "manage-catalog-aes",
+          "name": "manage",
+          "actionType": "import"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/downloadCatalog",
+      "handler": "manage-catalog-aes.export",
+      "config": {
+        "policies": [],
+        "description": "Dowload all data of the catalog AES in a file",
+        "tag": {
+          "plugin": "manage-catalog-aes",
+          "name": "manage",
+          "actionType": "export"
+        }
+      }
+    }
+  ]
+}

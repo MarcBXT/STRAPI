@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "analysisaes_h",
+  "info": {
+    "name": "Historique AES",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "expired": {
+      "type": "boolean",
+      "default": false
+    },
+    "start_date": {
+      "type": "datetime"
+    },
+    "specimen": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer"
+    },
+    "conditions": {
+      "collection": "codesaes"
+    },
+    "target_sites": {
+      "collection": "codesaes"
+    },
+    "prices": {
+      "collection": "pricing"
+    },
+    "application_start_date": {
+      "type": "datetime"
+    },
+    "end_date": {
+      "type": "datetime"
+    }
+  }
+}

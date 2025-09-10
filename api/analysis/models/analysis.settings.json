@@ -1,0 +1,182 @@
+{
+  "kind": "collectionType",
+  "collectionName": "analysis",
+  "info": {
+    "name": "Analyses",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true,
+      "maxLength": 20,
+      "unique": false
+    },
+    "subcontracted": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "urgent": {
+      "type": "boolean",
+      "default": false
+    },
+    "forbidden_at_home": {
+      "type": "boolean",
+      "default": false
+    },
+    "empty_stomach": {
+      "type": "boolean",
+      "default": false
+    },
+    "consent_required": {
+      "type": "boolean",
+      "default": false
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "laboratory": {
+      "columnName": "laboratory",
+      "model": "laboratory"
+    },
+    "synonymous": {
+      "type": "text",
+      "maxLength": 500
+    },
+    "analyser": {
+      "model": "analyser"
+    },
+    "diet": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "id_hsb": {
+      "type": "integer"
+    },
+    "stability_before_preprocessing": {
+      "type": "decimal"
+    },
+    "volume_pipette": {
+      "type": "decimal"
+    },
+    "time_limit_for_results": {
+      "type": "decimal"
+    },
+    "time_limit_add_analysis": {
+      "type": "decimal"
+    },
+    "receptacles": {
+      "via": "analysis",
+      "collection": "receptacles",
+      "dominant": true
+    },
+    "version": {
+      "type": "integer",
+      "default": 1
+    },
+    "code_sil": {
+      "type": "string",
+      "maxLength": 20,
+      "required": false
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "comment_preprocessing": {
+      "type": "text"
+    },
+    "comment_sample": {
+      "type": "text"
+    },
+    "comment_diet": {
+      "type": "text"
+    },
+    "centrifugation": {
+      "model": "programme"
+    },
+    "days": {
+      "collection": "day"
+    },
+    "histories": {
+      "collection": "analysis-h"
+    },
+    "analysis_aes": {
+      "collection": "analysisaes"
+    },
+    "prices": {
+      "collection": "pricing"
+    },
+    "permissions": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "label_en": {
+      "type": "string"
+    },
+    "synonymous_en": {
+      "type": "text",
+      "maxLength": 500
+    },
+    "comment_preprocessing_en": {
+      "type": "text"
+    },
+    "comment_sample_en": {
+      "type": "text"
+    },
+    "comment_diet_en": {
+      "type": "text"
+    },
+    "label_de": {
+      "type": "string"
+    },
+    "synonymous_de": {
+      "type": "text"
+    },
+    "comment_preprocessing_de": {
+      "type": "text"
+    },
+    "comment_sample_de": {
+      "type": "text"
+    },
+    "comment_diet_de": {
+      "type": "text"
+    },
+    "documents": {
+      "collection": "document"
+    },
+    "comment_subcontractor": {
+      "type": "richtext"
+    },
+    "can_prescribe": {
+      "type": "boolean",
+      "default": true
+    },
+    "private": {
+      "type": "boolean",
+      "default": false
+    },
+    "booking_only": {
+      "type": "boolean",
+      "default": false
+    },
+    "do_not_bill": {
+      "type": "boolean",
+      "default": false
+    },
+    "prelevements": {
+      "collection": "prelevement",
+      "via": "analyses",
+      "dominant": true
+    }
+  }
+}

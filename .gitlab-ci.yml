@@ -1,0 +1,80 @@
+stages:
+  - build
+  - deploy
+
+build staging:
+  stage: build
+  script:
+    - cat $CATALOGUE_ENV_FILE > .env
+    - rsync -Haur --delete-before `pwd`/ xxxxxxxxxxxxx.site.lu:/home/xxxxx/xxx-xxx-staging
+    - ssh xxxxxxxxx.site.lu "cd ~/xxxxx-xxxx-staging && cat $DB_ENV_FILE >> .env && NODE_ENV=production yarn install && NODE_ENV=production yarn build"
+  only:
+    - develop
+  environment:
+    name: staging
+  variables:
+    DB_ENV_FILE: /home/catalogue/.env-api-staging
+
+build production:
+  stage: build
+  script:
+    - cat $CATALOGUE_ENV_FILE > .env
+    - rsync -Haur --delete-before `pwd`/ xxxxxx.site.lu:/xxxx/xxxxx/xxxx-xxx-xxxx
+    - ssh xxxxxxxxx.site.lu "cd ~/xxxxx-xxx-xxxx && cat $DB_ENV_FILE >> .env && NODE_ENV=production yarn install && NODE_ENV=production yarn build"
+  only:
+    - master
+  environment:
+    name: main
+  variables:
+    DB_ENV_FILE: /home/catalogue/.env-api-production
+
+deploy staging:
+  stage: deploy
+  only:
+    - develop
+  script:
+    - ssh xxxxxxxxxxx.xxxxx.lu "mkdir -p ~/api-staging/current && cd ~/api-staging/current && rsync -Haur --delete-before ~/api-staging/current/ ~/api-staging/old && rsync -Haur --delete-before ~/build-api-staging/ ~/api-staging/current && rsync -Haur ~/api-staging/old/public/ ~/api-staging/current/public && pm2 startOrRestart ecosystem.staging.config.js --env production"
+  environment:
+    name: staging
+
+stop staging:
+  stage: deploy
+  when: manual
+  only:
+    - develop
+  script:
+    - ssh xxxxxxxxxxxxx.xxxxx.lu "cd ~/api-staging/current && pm2 ls && pm2 stop ecosystem.staging.config.js --env production && pm2 ls"
+
+start staging:
+  stage: deploy
+  when: manual
+  only:
+    - develop
+  script:
+    - ssh xxxxxxxxxxxxx.site.lu "cd ~/api-staging/current && pm2 ls && pm2 startOrRestart ecosystem.staging.config.js --env production && pm2 ls"
+
+deploy production:
+  stage: deploy
+  when: manual
+  only:
+    - master
+  script:
+    - ssh xxxxxxxxxxxxx.site.lu "mkdir -p ~/api-production/current && cd ~/api-production/current && rsync -Haur --delete-before ~/api-production/current/ ~/api-production/old && rsync -Haur --delete-before ~/build-api-production/ ~/api-production/current && rsync -Haur ~/api-production/old/public/ ~/api-production/current/public && pm2 startOrRestart ecosystem.production.config.js --env production"
+  environment:
+    name: main
+
+logs staging:
+  stage: deploy
+  when: manual
+  only:
+    - develop
+  script:
+    - ssh xxxxxxxxxxxxx.site.lu "pm2 ls && pm2 logs --nostream --raw --lines 300 catalogue-analyses-staging"
+
+logs production:
+  stage: deploy
+  when: manual
+  only:
+    - master
+  script:
+    - ssh xxxxxxxxxxxxx.site.lu "pm2 ls && pm2 logs --nostream --raw --lines 300 catalogue-analyses-production"

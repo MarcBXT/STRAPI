@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pricing",
+  "info": {
+    "name": "Tarification",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "label": {
+      "type": "text",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "default": 0,
+      "required": true
+    },
+    "coefficient": {
+      "type": "decimal",
+      "default": 0
+    },
+    "rule_cumulation": {
+      "type": "text"
+    },
+    "rule_best_practices": {
+      "type": "text"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "CNS",
+        "BNXT",
+        "TRSP"
+      ],
+      "required": true
+    },
+    "version": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    },
+    "histories": {
+      "collection": "pricing-h"
+    },
+    "code_rule_cumulation": {
+      "type": "text"
+    },
+    "code_override": {
+      "type": "string"
+    },
+    "unique": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

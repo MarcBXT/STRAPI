@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/codesaes",
+      "handler": "codesaes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/codesaes/count",
+      "handler": "codesaes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/codesaes/:id",
+      "handler": "codesaes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/codesaes",
+      "handler": "codesaes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/codesaes/:id",
+      "handler": "codesaes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/codesaes/:id",
+      "handler": "codesaes.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

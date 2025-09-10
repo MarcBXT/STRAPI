@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "laboratories",
+  "info": {
+    "name": "Laboratoires",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "Adresse": {
+      "type": "component",
+      "repeatable": true,
+      "component": "localisation.address"
+    },
+    "days": {
+      "collection": "day"
+    }
+  }
+}

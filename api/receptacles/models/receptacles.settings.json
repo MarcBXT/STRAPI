@@ -1,0 +1,111 @@
+{
+  "kind": "collectionType",
+  "collectionName": "receptacles",
+  "info": {
+    "name": "Tubes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true,
+      "maxLength": 20,
+      "unique": false
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "code_sil": {
+      "type": "string",
+      "required": true
+    },
+    "id_img": {
+      "type": "integer"
+    },
+    "display_order": {
+      "type": "integer"
+    },
+    "timer": {
+      "type": "decimal"
+    },
+    "timer_before_result": {
+      "type": "decimal"
+    },
+    "regex": {
+      "type": "string"
+    },
+    "analysis": {
+      "via": "receptacles",
+      "collection": "analysis"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "version": {
+      "default": 1,
+      "type": "integer"
+    },
+    "analysis_h": {
+      "via": "receptacles",
+      "collection": "analysis-h"
+    },
+    "protected_from_light": {
+      "type": "boolean",
+      "default": false
+    },
+    "public_description": {
+      "type": "string"
+    },
+    "aliquot": {
+      "type": "boolean",
+      "default": false
+    },
+    "aliquots": {
+      "collection": "receptacles",
+      "via": "primary",
+      "dominant": true
+    },
+    "primary": {
+      "collection": "receptacles",
+      "via": "aliquots"
+    },
+    "public_description_en": {
+      "type": "string"
+    },
+    "public_description_de": {
+      "type": "string"
+    },
+    "picto": {
+      "model": "image"
+    },
+    "to_package": {
+      "type": "boolean"
+    },
+    "color": {
+      "via": "receptacles",
+      "model": "couleurs"
+    },
+    "app_name": {
+      "type": "string"
+    },
+    "app_name_en": {
+      "type": "string"
+    },
+    "app_name_de": {
+      "type": "string"
+    },
+    "app_name_pt": {
+      "type": "string"
+    },
+    "color_crown": {
+      "model": "couleurs"
+    }
+  }
+}

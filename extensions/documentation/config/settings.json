@@ -1,0 +1,40 @@
+{
+  "info": {
+    "version": "1.0.0",
+    "title": "API of Analysis Catalog",
+    "description": "",
+    "termsOfService": "YOUR_TERMS_OF_SERVICE_URL",
+    "contact": {
+      "name": "TEAM",
+      "email": "support.bionext@Intech.lu",
+      "url": "mywebsite.io"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "x-strapi-config": {
+    "pluginsForWhichToGenerateDoc": [
+      "manage-catalog", "manage-catalog-aes", "manage-catalog-cns"
+    ]
+  },
+  "servers": [
+    {
+      "url": "http://localhost:1337",
+      "description": "Local server"
+    },
+    {
+      "url": "https://api.intech.lu/bionext-ca",
+      "description": "Development server"
+    },
+    {
+      "url": "https://catalogue-test.bionext.lu",
+      "description": "TEST server"
+    },
+    {
+      "url": "https://catalogue.bionext.lu",
+      "description": "PROD server"
+    }
+  ]
+}

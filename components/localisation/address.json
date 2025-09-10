@@ -1,0 +1,26 @@
+{
+  "collectionName": "address",
+  "info": {
+    "name": "Adresse",
+    "icon": "map-marker-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "string"
+    },
+    "street": {
+      "type": "string"
+    },
+    "zipcode": {
+      "type": "string"
+    },
+    "town": {
+      "type": "string"
+    },
+    "country": {
+      "model": "country"
+    }
+  }
+}

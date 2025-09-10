@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "countries",
+  "info": {
+    "name": "Pays",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code_iso": {
+      "pluginOptions": {},
+      "type": "string",
+      "required": true,
+      "maxLength": 2,
+      "minLength": 2
+    },
+    "label": {
+      "pluginOptions": {},
+      "type": "string",
+      "required": true
+    }
+  }
+}

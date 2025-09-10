@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/analysisaes",
+      "handler": "analysisaes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/analysisaes/count",
+      "handler": "analysisaes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/analysisaes/:id",
+      "handler": "analysisaes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/analysisaes/:id/history",
+      "handler": "analysisaes.findHistory",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/analysisaes",
+      "handler": "analysisaes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/analysisaes/:id",
+      "handler": "analysisaes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/analysisaes/:id",
+      "handler": "analysisaes.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

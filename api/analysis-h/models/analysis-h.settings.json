@@ -1,0 +1,148 @@
+{
+  "kind": "collectionType",
+  "collectionName": "analysis_h",
+  "info": {
+    "name": "Historique des analyses",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "code_aes": {
+      "type": "string"
+    },
+    "code_cns": {
+      "type": "string"
+    },
+    "subcontracted": {
+      "type": "boolean"
+    },
+    "urgent": {
+      "type": "boolean"
+    },
+    "forbidden_at_home": {
+      "type": "boolean"
+    },
+    "empty_stomach": {
+      "type": "boolean"
+    },
+    "consent_required": {
+      "type": "boolean"
+    },
+    "label": {
+      "type": "string",
+      "private": false
+    },
+    "laboratory": {
+      "model": "laboratory"
+    },
+    "synonymous": {
+      "type": "text"
+    },
+    "analyser": {
+      "model": "analyser"
+    },
+    "diet": {
+      "type": "boolean"
+    },
+    "id_hsb": {
+      "type": "integer"
+    },
+    "stability_before_preprocessing": {
+      "type": "decimal"
+    },
+    "volume_pipette": {
+      "type": "decimal"
+    },
+    "time_limit_for_results": {
+      "type": "decimal"
+    },
+    "time_limit_add_analysis": {
+      "type": "decimal"
+    },
+    "version": {
+      "type": "integer"
+    },
+    "comment_preprocessing": {
+      "type": "text"
+    },
+    "code_sil": {
+      "type": "string"
+    },
+    "comment_sample": {
+      "type": "text"
+    },
+    "comment_diet": {
+      "type": "text"
+    },
+    "centrifugation": {
+      "model": "programme"
+    },
+    "days": {
+      "collection": "day"
+    },
+    "start_date": {
+      "type": "datetime"
+    },
+    "end_date": {
+      "type": "datetime"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "receptacles": {
+      "via": "analysis_h",
+      "collection": "receptacles",
+      "dominant": true
+    },
+    "prices": {
+      "collection": "pricing"
+    },
+    "analysis_aes": {
+      "collection": "analysisaes"
+    },
+    "permissions": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "label_en": {
+      "type": "string"
+    },
+    "label_de": {
+      "type": "string"
+    },
+    "synonymous_en": {
+      "type": "text"
+    },
+    "synonymous_de": {
+      "type": "text"
+    },
+    "comment_preprocessing_en": {
+      "type": "text"
+    },
+    "comment_preprocessing_de": {
+      "type": "text"
+    },
+    "comment_sample_en": {
+      "type": "text"
+    },
+    "comment_sample_de": {
+      "type": "text"
+    },
+    "comment_diet_en": {
+      "type": "text"
+    },
+    "comment_diet_de": {
+      "type": "text"
+    },
+    "documents": {
+      "collection": "document"
+    }
+  }
+}

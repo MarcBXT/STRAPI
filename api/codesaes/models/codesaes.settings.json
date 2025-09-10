@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "codesaes",
+  "info": {
+    "name": "Codes AES",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "label": {
+      "type": "string"
+    },
+    "code_system": {
+      "type": "string"
+    },
+    "add_original_text": {
+      "type": "boolean",
+      "default": false
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "CONDITION",
+        "TARGET_SITE"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "days",
+  "info": {
+    "name": "Jours",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {}
+    }
+  }
+}
