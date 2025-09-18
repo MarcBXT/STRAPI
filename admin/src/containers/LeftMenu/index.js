@@ -47,7 +47,9 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
         element.destination ===
           "/plugins/content-manager/collectionType/application::image.image" ||
         element.destination ===
-          "/plugins/content-manager/collectionType/application::document.document"
+          "/plugins/content-manager/collectionType/application::document.document" ||
+        element.destination ===
+          "/plugins/content-manager/collectionType/application::result.result"
       ) {
         return element;
       }
@@ -89,6 +91,13 @@ const LeftMenu = ({ shouldUpdateStrapi, version, plugins, setUpdateMenu }) => {
         "/plugins/content-manager/collectionType/application::couleurs.couleurs"
       ) {
         elt.icon = "paint-brush";
+        return elt;
+      } else if (
+        item.destination ===
+        "/plugins/content-manager/collectionType/application::result.result"
+      ) {
+        elt.icon = "clipboard-list";
+        elt.label = "Résultats";
         return elt;
       }
     });
